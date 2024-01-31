@@ -23,8 +23,8 @@ class CacheProxyTest {
             " \"@Cache(cacheType = FILE, zip = true)\"")
     @Test
     void shouldReturnPowerNumberFromCachedZipFile() {
-        double result = proxiedService.powerNumber(2, 3);
-        double cachedResult = proxiedService.powerNumber(2, 3);
+        double result = proxiedService.powerNumber(5, 4);
+        double cachedResult = proxiedService.powerNumber(5, 4);
 
         assertEquals(result, cachedResult);
     }
@@ -32,8 +32,8 @@ class CacheProxyTest {
     @DisplayName("Проверка кэширования вычисления факториала числа при дефолтных параметрах \"@Cache\"")
     @Test
     void shouldReturnFactorialOfNumberFromInMemoryCache() {
-        int result = proxiedService.factorial(5);
-        int cachedResult = proxiedService.factorial(5);
+        int result = proxiedService.factorial(7);
+        int cachedResult = proxiedService.factorial(7);
 
         assertEquals(result, cachedResult);
     }
@@ -42,8 +42,8 @@ class CacheProxyTest {
             "\"@Cache(cacheType = FILE, fileNamePrefix = \"divideNumber_\", listSize = 3)\"")
     @Test
     void shouldReturnDivideNumbersOfGotNumberButOnlyLastThreeResults() {
-        List<Integer> result = proxiedService.dividedWithoutRemainder(30);
-        List<Integer> cachedResult = proxiedService.dividedWithoutRemainder(30);
+        List<Integer> result = proxiedService.dividedWithoutRemainder(40);
+        List<Integer> cachedResult = proxiedService.dividedWithoutRemainder(40);
 
         List<Integer> checkList = result.subList(result.size() - 3, result.size());
 
