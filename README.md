@@ -257,11 +257,11 @@ Service cachedService = CacheProxy.cache(service, cacheFolder, Service.class);
 
 Также в консоли происходит отображение работы прокси с передаваемыми его методам параметрами:
 
-![testConsole](https://github.com/MironovNikita/sber-homework10/blob/main/res/testConsole.png)
+![testConsole](https://github.com/MironovNikita/sber-homework8/blob/main/res/testConsole.png)
 
 В результате работы тестов в вышеуказанной директории также появились файлы, содержащие кэш для вызванных методов:
 
-![testFolder](https://github.com/MironovNikita/sber-homework10/blob/main/res/testFolder.png)
+![testFolder](https://github.com/MironovNikita/sber-homework8/blob/main/res/testFolder.png)
 
 Как можно видеть из вновь созданных файлов, в результате изменения передаваемых значений изменилась хэш-сумма, указанная в наименовании самих файлов. Таким образом, с помощью параметра `identityBy` мы можем гибко настраивать уникальность наших вычислений и кэшировать различные данные.
 
