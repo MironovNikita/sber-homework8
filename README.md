@@ -253,7 +253,7 @@ Service cachedService = CacheProxy.cache(service, cacheFolder, Service.class);
 
 Результаты выполнения тестов:
 
-![testResults](https://github.com/MironovNikita/sber-homework10/blob/main/res/testResults.png)
+![testResults](https://github.com/MironovNikita/sber-homework8/blob/main/res/testResults.png)
 
 Также в консоли происходит отображение работы прокси с передаваемыми его методам параметрами:
 
